@@ -31,14 +31,14 @@ struct Sunset: View {
                         ))
                 
                 
-                Path(CGRect(x: 0, y: middle, width: size, height: halfMiddle ))
+                Path(CGRect(x: 0, y: middle, width: size, height: halfMiddle + nearLine ))
                     .fill(RadialGradient(
                         colors: [.white, Color(red: 64/255, green: 144/255, blue: 248/255)],
                         center: .center,
                         startRadius: size * 0.03,
                         endRadius: size * 0.5
                     ))
-                Path(CGRect(x: 0, y: middle + halfMiddle, width: size, height: halfMiddle ))
+                Path(CGRect(x: 0, y: middle + halfMiddle, width: size, height: halfMiddle - nearLine ))
                     .fill(
                         RadialGradient(
                             colors: [.white, Color(red: 180/255, green: 208/255, blue: 108/255)],
@@ -46,37 +46,6 @@ struct Sunset: View {
                             startRadius: size * 0.05,
                             endRadius: size * 0.6
                         ))
-                
-                
-                
-    //            Path { path in
-    //                path.move(to: CGPoint(x: nearLine, y: middle))
-    //                path.addLine(to: CGPoint(x: halfMiddle, y: halfMiddle))
-    //                path.addLine(to: CGPoint(x: middle, y: middle))
-    //                path.addLine(to: CGPoint(x: middle + halfMiddle, y: halfMiddle))
-    //                path.addLine(to: CGPoint(x: size, y: middle))
-    //                path.addLine(to: CGPoint(x: middle + halfMiddle, y: middle))
-    //                path.addLine(to: CGPoint(x: size, y: middle))
-    //
-    //
-    //            }
-                
-                
-                
-                
-                
-                
-    //            Path {
-    //                p in
-    //                p.addEllipse(in:  CGRect(x: nearLine, y: middle, width: nearLine * 8, height: nearLine * 2.5))
-    //            }.fill(
-    //                RadialGradient(
-    //                    colors: [.white, Color(red: 96/255, green: 194/255, blue: 237/255)],
-    //                    center: .center,
-    //                    startRadius: size * 0.05,
-    //                    endRadius: size * 0.3
-    //                ))
-                
                 
                 Path { path in
                     path.addEllipse(in: CGRect(x: middle * 0.87, y: nearLine, width: nearLine * 1.3, height: nearLine * 1.3))
@@ -146,6 +115,42 @@ struct Sunset: View {
                         startRadius: size * 0.05,
                         endRadius: size * 0.6
                     ))
+                
+                Path { path in
+                    path.addEllipse(in: CGRect(x: nearLine * 0.6, y: middle + nearLine * 0.4 , width: nearLine , height: nearLine ))
+                }
+                .trim(from: 0, to: 0.5)
+                .fill(Color(red: 221/255, green: 235/255, blue: 211/255))
+                .offset(x: animate ? middle + nearLine * 3 : 0)
+                .animation(.interpolatingSpring(
+                    mass: 1,
+                    stiffness: 20,
+                    damping: 10,
+                    initialVelocity: 0
+                ).speed(0.05), value: animate)
+
+                .onTapGesture {
+                    animate.toggle()
+                }
+                
+                Path { path in
+                    path.move(to: CGPoint(x: nearLine * 1.4, y: middle + nearLine * 0.9))
+                    path.addLine(to: CGPoint(x: nearLine + nearLine*0.03, y: middle + nearLine/2))
+                    path.addLine(to: CGPoint(x: nearLine * 0.9, y: middle + nearLine * 0.9))
+                }
+                .fill(Color(red: 221/255, green: 235/255, blue: 211/255))
+                .offset(x: animate ? middle + nearLine * 3 : 0)
+                .animation(.interpolatingSpring(
+                    mass: 1,
+                    stiffness: 20,
+                    damping: 10,
+                    initialVelocity: 0
+                ).speed(0.05), value: animate)
+
+                .onTapGesture {
+                    animate.toggle()
+                }
+                
             }
             }
             
