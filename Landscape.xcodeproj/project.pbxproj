@@ -11,6 +11,7 @@
 		832598C2295B5D4E00B8DE97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832598C1295B5D4E00B8DE97 /* ContentView.swift */; };
 		832598C4295B5D4F00B8DE97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832598C3295B5D4F00B8DE97 /* Assets.xcassets */; };
 		832598C7295B5D4F00B8DE97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832598C6295B5D4F00B8DE97 /* Preview Assets.xcassets */; };
+		832598CE295B5D7500B8DE97 /* Sunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832598CD295B5D7500B8DE97 /* Sunset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		832598C1295B5D4E00B8DE97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		832598C3295B5D4F00B8DE97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832598C6295B5D4F00B8DE97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		832598CD295B5D7500B8DE97 /* Sunset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				832598BF295B5D4E00B8DE97 /* LandscapeApp.swift */,
 				832598C1295B5D4E00B8DE97 /* ContentView.swift */,
+				832598CD295B5D7500B8DE97 /* Sunset.swift */,
 				832598C3295B5D4F00B8DE97 /* Assets.xcassets */,
 				832598C5295B5D4F00B8DE97 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832598CE295B5D7500B8DE97 /* Sunset.swift in Sources */,
 				832598C2295B5D4E00B8DE97 /* ContentView.swift in Sources */,
 				832598C0295B5D4E00B8DE97 /* LandscapeApp.swift in Sources */,
 			);
