@@ -9,10 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
             Sunset()
                 .frame(width: 400, height: 400)
-        }
     }
 }
 
