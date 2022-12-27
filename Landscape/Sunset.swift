@@ -149,7 +149,7 @@ struct Sunset: View {
             }
             }
             
-        }
+}
 
 struct Sunset_Previews: PreviewProvider {
     static var previews: some View {
